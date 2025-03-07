@@ -1,12 +1,5 @@
 ﻿
 
-/*
-public class Rootobject
-{
-    public Main main { get; set; }
-}
-*/
-
 public class MeterJson
 {
     public MeterDatum? main { get; set; }
