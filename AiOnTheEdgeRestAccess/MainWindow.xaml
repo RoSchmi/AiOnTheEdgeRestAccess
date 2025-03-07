@@ -1,0 +1,27 @@
+﻿<Window x:Class="AiOnTheEdgeRestAccess.MainWindow"
+        x:ClassModifier="internal" 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:local="clr-namespace:AiOnTheEdgeRestAccess"
+        mc:Ignorable="d"
+        Title="AI on the Edge Reader" Height="450" Width="800">
+    <Grid>
+        <Button Content="Get Value" Command="{Binding Get_Value_Clicked_Command}" HorizontalAlignment="Left" Margin="145,214,0,0" VerticalAlignment="Top" Width="148" Height="34"/>
+        <TextBox HorizontalAlignment="Left" Margin="362,127,0,0" TextWrapping="Wrap"   Text="{Binding ErrorMessage}" IsReadOnly="True"  VerticalAlignment="Top" Width="391"/>
+        <ListBox ItemsSource="{Binding ValuesList}" Margin="362,214,47,45"/>
+        <Label Content="Error Message" HorizontalAlignment="Left" Margin="354,96,0,0" VerticalAlignment="Top" Width="158"/>
+        <Label Content="Reading"  HorizontalAlignment="Left" Margin="362,183,0,0" VerticalAlignment="Top" Width="65"/>
+        <TextBox Text="{Binding ReadInterval}" HorizontalAlignment="Left" Margin="152,124,0,0" TextWrapping="Wrap" Background="Yellow" VerticalAlignment="Top" Width="63"/>
+        <Label Content="Read Interval in seconds (5....300)" HorizontalAlignment="Left" Margin="145,98,0,0" VerticalAlignment="Top" Width="196"/>
+        <TextBox HorizontalAlignment="Left" Margin="152,69,0,0" TextWrapping="Wrap" Text="{Binding HostName}" Background="Yellow" VerticalAlignment="Top" Width="165"/>
+        <Label Content="hostname"  HorizontalAlignment="Left" Margin="152,41,0,0" VerticalAlignment="Top" Width="96"/>
+        <TextBox HorizontalAlignment="Left" Margin="362,69,0,0" TextWrapping="Wrap" Text="{Binding RequestUrl}" IsReadOnly="True" FontStyle="Oblique" VerticalAlignment="Top" Width="283"/>
+        <Label Content="Request" HorizontalAlignment="Left" Margin="362,41,0,0" VerticalAlignment="Top"/>
+        <Label Content="This Test Application reads the json from an Esp32-Cam running AI-on-the-edge-device  (https://github.com/jomjol/AI-on-the-edge-device)" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="769"/>
+        <Label Content="Consumption-BaseOffset" HorizontalAlignment="Left" Margin="145,147,0,0" VerticalAlignment="Top" Width="165"/>
+        <TextBox Text="{Binding ConsumptionBaseOffset}" HorizontalAlignment="Left" Margin="152,178,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+    </Grid>
+</Window>
