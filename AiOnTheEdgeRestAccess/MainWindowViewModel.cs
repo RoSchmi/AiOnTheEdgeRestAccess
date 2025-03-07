@@ -9,7 +9,6 @@ using System.Collections.ObjectModel;
 using System.Globalization;
 
 
-
 namespace AiOnTheEdgeRestAccess
 {
     internal sealed partial class MainWindowViewModel : ObservableObject
